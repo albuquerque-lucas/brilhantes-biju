@@ -1,0 +1,46 @@
+// Variáveis de cores
+$color-tiffany: #0ABAB5;
+$color-gold: #D4AF37;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-gray-light: #F5F5F5;
+$color-gray-medium: #E0E0E0;
+$color-gray-dark: #757575;
+$color-text-dark: #333333;
+$color-text-medium: #666666;
+$color-text-light: #999999;
+$color-border: #EEEEEE;
+$color-background-light: #F9F9F9;
+$color-error: #D32F2F;
+$color-error-light: #FFEBEE;
+$color-success: #388E3C;
+$color-warning: #F57C00;
+
+// Espaçamento
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+// Bordas
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// Sombras
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Transições
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;

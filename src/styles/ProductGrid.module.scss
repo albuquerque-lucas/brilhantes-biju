@@ -1,0 +1,138 @@
+@import '../styles/variables';
+
+.productGridContainer {
+  margin-bottom: $spacing-xl;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-lg;
+  
+  .sectionTitle {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: $spacing-sm;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: $primary-color;
+    }
+  }
+  
+  .viewAllLink {
+    color: $primary-color;
+    font-weight: 500;
+    transition: color $transition-normal;
+    
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.viewControls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: $spacing-md;
+  
+  .viewButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $light-background;
+    border: 1px solid $border-color;
+    cursor: pointer;
+    transition: background-color $transition-normal, border-color $transition-normal;
+    
+    &:first-child {
+      border-radius: $border-radius-sm 0 0 $border-radius-sm;
+    }
+    
+    &:last-child {
+      border-radius: 0 $border-radius-sm $border-radius-sm 0;
+    }
+    
+    &.active {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      
+      .gridIcon, .listIcon {
+        background-color: white;
+      }
+    }
+  }
+  
+  .gridIcon {
+    display: grid;
+    grid-template-columns: repeat(3, 4px);
+    grid-template-rows: repeat(3, 4px);
+    gap: 2px;
+    
+    &:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background-color: $text-color;
+      grid-column: 1;
+      grid-row: 1;
+    }
+    
+    &:after {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background-color: $text-color;
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+  
+  .listIcon {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 16px;
+    
+    &:before, &:after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: $text-color;
+    }
+  }
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-lg;
+  
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: $breakpoint-xs) {
+    grid-template-columns: 1fr;
+  }
+  
+  &.listView {
+    grid-template-columns: 1fr;
+    
+    // Estilos específicos para visualização em lista
+    // (Seria necessário adaptar o componente ProductCard para suportar visualização em lista)
+  }
+}

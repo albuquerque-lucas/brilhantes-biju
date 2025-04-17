@@ -1,0 +1,225 @@
+@import '../styles/variables';
+
+.header {
+  width: 100%;
+  background-color: $background-color;
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: $z-index-sticky;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  
+  &.scrolled {
+    box-shadow: $shadow-md;
+  }
+}
+
+.topBar {
+  background-color: $light-background;
+  padding: $spacing-sm 0;
+  font-size: $font-size-sm;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .contactInfo {
+    color: $light-text-color;
+  }
+  
+  .userActions {
+    display: flex;
+    gap: $spacing-md;
+  }
+  
+  .userLink {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $light-text-color;
+    
+    &:hover {
+      color: $primary-color;
+    }
+    
+    svg {
+      font-size: $font-size-md;
+    }
+  }
+}
+
+.mainHeader {
+  padding: $spacing-md 0;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mobileMenuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: $font-size-lg;
+    color: $text-color;
+    
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  
+  img {
+    height: 60px;
+    width: auto;
+  }
+}
+
+.searchBar {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 $spacing-xl;
+  
+  form {
+    display: flex;
+    position: relative;
+  }
+  
+  input {
+    width: 100%;
+    padding: $spacing-sm $spacing-lg;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-md;
+    transition: border-color $transition-normal, box-shadow $transition-normal;
+    
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+      outline: none;
+    }
+  }
+  
+  button {
+    position: absolute;
+    right: $spacing-sm;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: $light-text-color;
+    font-size: $font-size-md;
+    cursor: pointer;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.cartLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: $text-color;
+  font-size: $font-size-lg;
+  
+  &:hover {
+    color: $primary-color;
+  }
+  
+  .cartCount {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: $primary-color;
+    color: white;
+    font-size: $font-size-xs;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: $border-radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.mainNav {
+  background-color: $primary-color;
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+      position: relative;
+      
+      a {
+        display: block;
+        padding: $spacing-md $spacing-lg;
+        color: white;
+        font-weight: 500;
+        transition: background-color $transition-normal;
+        
+        &:hover, &.active {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($text-color, 0.9);
+    transform: translateX(-100%);
+    transition: transform $transition-normal;
+    z-index: $z-index-modal;
+    
+    &.open {
+      transform: translateX(0);
+    }
+    
+    .container {
+      height: 100%;
+      align-items: center;
+    }
+    
+    .navList {
+      flex-direction: column;
+      width: 100%;
+      
+      li {
+        width: 100%;
+        
+        a {
+          padding: $spacing-lg;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
