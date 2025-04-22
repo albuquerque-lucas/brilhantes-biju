@@ -1,22 +1,22 @@
-@import '../variables';
+@use '../styles/variables' as vars;
 
 .accountPageContainer {
   display: flex;
   flex-direction: column;
-  padding: $spacing-lg;
-  background-color: $color-background-light;
+  padding: vars.$spacing-lg;
+  background-color: vars.$color-background-light;
   
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: vars.$breakpoint-md) {
     flex-direction: row;
-    gap: $spacing-xl;
+    gap: vars.$spacing-xl;
   }
 }
 
 .accountSidebar {
   width: 100%;
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
   
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: vars.$breakpoint-md) {
     width: 250px;
     flex-shrink: 0;
     margin-bottom: 0;
@@ -24,125 +24,125 @@
   
   h2 {
     font-size: 1.5rem;
-    margin-bottom: $spacing-lg;
-    color: $color-text-dark;
+    margin-bottom: vars.$spacing-lg;
+    color: vars.$color-text-dark;
   }
 }
 
 .accountNav {
   display: flex;
   flex-direction: column;
-  background-color: $color-white;
-  border-radius: $border-radius-lg;
+  background-color: vars.$color-white;
+  border-radius: vars.$border-radius-lg;
   overflow: hidden;
-  box-shadow: $box-shadow-sm;
+  box-shadow: vars.$box-shadow-sm;
 }
 
 .navLink {
   display: flex;
   align-items: center;
-  padding: $spacing-md $spacing-lg;
-  color: $color-text-dark;
+  padding: vars.$spacing-md vars.$spacing-lg;
+  color: vars.$color-text-dark;
   text-decoration: none;
   border-left: 3px solid transparent;
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: rgba($color-tiffany, 0.05);
-    color: $color-tiffany;
+    background-color: rgba(vars.$color-tiffany, 0.05);
+    color: vars.$color-tiffany;
   }
   
   &.active {
-    background-color: rgba($color-tiffany, 0.1);
-    border-left-color: $color-tiffany;
-    color: $color-tiffany;
+    background-color: rgba(vars.$color-tiffany, 0.1);
+    border-left-color: vars.$color-tiffany;
+    color: vars.$color-tiffany;
     font-weight: 500;
   }
   
   &:not(:last-child) {
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid vars.$color-border;
   }
 }
 
 .navIcon {
-  margin-right: $spacing-md;
+  margin-right: vars.$spacing-md;
 }
 
 .accountContent {
   flex: 1;
-  background-color: $color-white;
-  border-radius: $border-radius-lg;
-  padding: $spacing-xl;
-  box-shadow: $box-shadow-sm;
+  background-color: vars.$color-white;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-xl;
+  box-shadow: vars.$box-shadow-sm;
 }
 
 .accountSection {
   h2 {
     font-size: 1.5rem;
-    margin-bottom: $spacing-lg;
-    color: $color-text-dark;
-    padding-bottom: $spacing-sm;
-    border-bottom: 1px solid $color-border;
+    margin-bottom: vars.$spacing-lg;
+    color: vars.$color-text-dark;
+    padding-bottom: vars.$spacing-sm;
+    border-bottom: 1px solid vars.$color-border;
   }
 }
 
 .userInfo {
   display: flex;
   align-items: center;
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
 }
 
 .userAvatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: $color-tiffany;
-  color: $color-white;
+  background-color: vars.$color-tiffany;
+  color: vars.$color-white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   font-weight: 600;
-  margin-right: $spacing-lg;
+  margin-right: vars.$spacing-lg;
 }
 
 .userDetails {
   h3 {
     font-size: 1.2rem;
-    margin-bottom: $spacing-xs;
+    margin-bottom: vars.$spacing-xs;
   }
   
   p {
-    color: $color-text-medium;
-    margin-bottom: $spacing-xs;
+    color: vars.$color-text-medium;
+    margin-bottom: vars.$spacing-xs;
   }
 }
 
 .accountStats {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacing-md;
-  margin-bottom: $spacing-xl;
+  gap: vars.$spacing-md;
+  margin-bottom: vars.$spacing-xl;
 }
 
 .statItem {
   flex: 1;
   min-width: 120px;
-  background-color: $color-background-light;
-  border-radius: $border-radius-md;
-  padding: $spacing-md;
+  background-color: vars.$color-background-light;
+  border-radius: vars.$border-radius-md;
+  padding: vars.$spacing-md;
   text-align: center;
   
   h4 {
     font-size: 0.875rem;
-    color: $color-text-medium;
-    margin-bottom: $spacing-xs;
+    color: vars.$color-text-medium;
+    margin-bottom: vars.$spacing-xs;
   }
   
   p {
     font-size: 1.5rem;
     font-weight: 600;
-    color: $color-tiffany;
+    color: vars.$color-tiffany;
   }
 }
 
@@ -151,7 +151,7 @@
   justify-content: center;
   align-items: center;
   min-height: 200px;
-  color: $color-text-medium;
+  color: vars.$color-text-medium;
 }
 
 .emptyState {
@@ -159,44 +159,44 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: $spacing-xl 0;
-  color: $color-text-medium;
+  padding: vars.$spacing-xl 0;
+  color: vars.$color-text-medium;
   
   h3 {
-    margin: $spacing-md 0 $spacing-sm;
-    color: $color-text-dark;
+    margin: vars.$spacing-md 0 vars.$spacing-sm;
+    color: vars.$color-text-dark;
   }
   
   p {
-    margin-bottom: $spacing-lg;
+    margin-bottom: vars.$spacing-lg;
     text-align: center;
   }
 }
 
 .shopNowButton {
   display: inline-block;
-  padding: $spacing-md $spacing-lg;
-  background-color: $color-tiffany;
-  color: $color-white;
-  border-radius: $border-radius-md;
+  padding: vars.$spacing-md vars.$spacing-lg;
+  background-color: vars.$color-tiffany;
+  color: vars.$color-white;
+  border-radius: vars.$border-radius-md;
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s ease;
   
   &:hover {
-    background-color: darken($color-tiffany, 10%);
+    background-color: vars.shade-color(vars.$color-tiffany, 10%);
   }
 }
 
 .ordersList {
   display: flex;
   flex-direction: column;
-  gap: $spacing-lg;
+  gap: vars.$spacing-lg;
 }
 
 .orderCard {
-  border: 1px solid $color-border;
-  border-radius: $border-radius-md;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$border-radius-md;
   overflow: hidden;
 }
 
@@ -204,66 +204,66 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $spacing-md $spacing-lg;
-  background-color: $color-background-light;
-  border-bottom: 1px solid $color-border;
+  padding: vars.$spacing-md vars.$spacing-lg;
+  background-color: vars.$color-background-light;
+  border-bottom: 1px solid vars.$color-border;
   
   h3 {
     font-size: 1rem;
-    margin-bottom: $spacing-xs;
+    margin-bottom: vars.$spacing-xs;
   }
   
   p {
     font-size: 0.875rem;
-    color: $color-text-medium;
+    color: vars.$color-text-medium;
   }
 }
 
 .orderStatus {
   .status {
     display: inline-block;
-    padding: $spacing-xs $spacing-sm;
-    border-radius: $border-radius-sm;
+    padding: vars.$spacing-xs vars.$spacing-sm;
+    border-radius: vars.$border-radius-sm;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
   }
   
   .entregue {
-    background-color: rgba($color-success, 0.1);
-    color: $color-success;
+    background-color: rgba(vars.$color-success, 0.1);
+    color: vars.$color-success;
   }
   
   .emprocessamento {
-    background-color: rgba($color-warning, 0.1);
-    color: $color-warning;
+    background-color: rgba(vars.$color-warning, 0.1);
+    color: vars.$color-warning;
   }
 }
 
 .orderItems {
-  padding: $spacing-md $spacing-lg;
+  padding: vars.$spacing-md vars.$spacing-lg;
 }
 
 .orderItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $spacing-sm 0;
+  padding: vars.$spacing-sm 0;
   
   &:not(:last-child) {
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid vars.$color-border;
   }
 }
 
 .itemInfo {
   .itemName {
     font-weight: 500;
-    margin-bottom: $spacing-xs;
+    margin-bottom: vars.$spacing-xs;
   }
   
   .itemQuantity {
     font-size: 0.875rem;
-    color: $color-text-medium;
+    color: vars.$color-text-medium;
   }
 }
 
@@ -275,9 +275,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $spacing-md $spacing-lg;
-  background-color: $color-background-light;
-  border-top: 1px solid $color-border;
+  padding: vars.$spacing-md vars.$spacing-lg;
+  background-color: vars.$color-background-light;
+  border-top: 1px solid vars.$color-border;
 }
 
 .orderTotal {
@@ -285,43 +285,43 @@
   
   span {
     font-weight: 600;
-    color: $color-tiffany;
+    color: vars.$color-tiffany;
   }
 }
 
 .viewOrderButton {
   display: inline-block;
-  padding: $spacing-sm $spacing-md;
-  background-color: $color-white;
-  border: 1px solid $color-tiffany;
-  color: $color-tiffany;
-  border-radius: $border-radius-sm;
+  padding: vars.$spacing-sm vars.$spacing-md;
+  background-color: vars.$color-white;
+  border: 1px solid vars.$color-tiffany;
+  color: vars.$color-tiffany;
+  border-radius: vars.$border-radius-sm;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: $color-tiffany;
-    color: $color-white;
+    background-color: vars.$color-tiffany;
+    color: vars.$color-white;
   }
 }
 
 .wishlistGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: $spacing-lg;
+  gap: vars.$spacing-lg;
 }
 
 .wishlistItem {
-  border: 1px solid $color-border;
-  border-radius: $border-radius-md;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$border-radius-md;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: $box-shadow-md;
+    box-shadow: vars.$box-shadow-md;
   }
 }
 
@@ -342,30 +342,30 @@
 }
 
 .wishlistItemInfo {
-  padding: $spacing-md;
+  padding: vars.$spacing-md;
   
   h3 {
     font-size: 1rem;
-    margin-bottom: $spacing-xs;
+    margin-bottom: vars.$spacing-xs;
   }
 }
 
 .wishlistItemPrice {
   font-size: 1.1rem;
   font-weight: 600;
-  color: $color-tiffany;
-  margin-bottom: $spacing-md;
+  color: vars.$color-tiffany;
+  margin-bottom: vars.$spacing-md;
 }
 
 .wishlistItemActions {
   display: flex;
   flex-direction: column;
-  gap: $spacing-sm;
+  gap: vars.$spacing-sm;
 }
 
 .addToCartButton, .removeFromWishlistButton {
-  padding: $spacing-sm;
-  border-radius: $border-radius-sm;
+  padding: vars.$spacing-sm;
+  border-radius: vars.$border-radius-sm;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
@@ -374,76 +374,76 @@
 }
 
 .addToCartButton {
-  background-color: $color-tiffany;
-  color: $color-white;
+  background-color: vars.$color-tiffany;
+  color: vars.$color-white;
   
   &:hover {
-    background-color: darken($color-tiffany, 10%);
+    background-color: vars.shade-color(vars.$color-tiffany, 10%);
   }
 }
 
 .removeFromWishlistButton {
-  background-color: $color-white;
-  border: 1px solid $color-border;
-  color: $color-text-medium;
+  background-color: vars.$color-white;
+  border: 1px solid vars.$color-border;
+  color: vars.$color-text-medium;
   
   &:hover {
-    background-color: $color-gray-light;
+    background-color: vars.$color-gray-light;
   }
 }
 
 .addressList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: $spacing-lg;
+  gap: vars.$spacing-lg;
 }
 
 .addressCard {
   position: relative;
-  border: 1px solid $color-border;
-  border-radius: $border-radius-md;
-  padding: $spacing-lg;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$border-radius-md;
+  padding: vars.$spacing-lg;
   
   &.defaultAddress {
-    border-color: $color-tiffany;
+    border-color: vars.$color-tiffany;
   }
   
   h3 {
     font-size: 1.1rem;
-    margin-bottom: $spacing-md;
+    margin-bottom: vars.$spacing-md;
   }
 }
 
 .defaultBadge {
   position: absolute;
-  top: $spacing-sm;
-  right: $spacing-sm;
-  background-color: $color-tiffany;
-  color: $color-white;
+  top: vars.$spacing-sm;
+  right: vars.$spacing-sm;
+  background-color: vars.$color-tiffany;
+  color: vars.$color-white;
   font-size: 0.75rem;
   font-weight: 600;
-  padding: $spacing-xs $spacing-sm;
-  border-radius: $border-radius-sm;
+  padding: vars.$spacing-xs vars.$spacing-sm;
+  border-radius: vars.$border-radius-sm;
 }
 
 .addressDetails {
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
   
   p {
-    margin-bottom: $spacing-xs;
-    color: $color-text-medium;
+    margin-bottom: vars.$spacing-xs;
+    color: vars.$color-text-medium;
   }
 }
 
 .addressActions {
   display: flex;
   flex-wrap: wrap;
-  gap: $spacing-sm;
+  gap: vars.$spacing-sm;
 }
 
 .editButton, .setDefaultButton, .deleteButton {
-  padding: $spacing-xs $spacing-sm;
-  border-radius: $border-radius-sm;
+  padding: vars.$spacing-xs vars.$spacing-sm;
+  border-radius: vars.$border-radius-sm;
   font-size: 0.75rem;
   font-weight: 500;
   cursor: pointer;
@@ -452,31 +452,31 @@
 }
 
 .editButton {
-  background-color: $color-gray-light;
-  color: $color-text-dark;
+  background-color: vars.$color-gray-light;
+  color: vars.$color-text-dark;
   
   &:hover {
-    background-color: darken($color-gray-light, 10%);
+    background-color: vars.shade-color(vars.$color-gray-light, 10%);
   }
 }
 
 .setDefaultButton {
-  background-color: $color-white;
-  border: 1px solid $color-tiffany;
-  color: $color-tiffany;
+  background-color: vars.$color-white;
+  border: 1px solid vars.$color-tiffany;
+  color: vars.$color-tiffany;
   
   &:hover {
-    background-color: rgba($color-tiffany, 0.1);
+    background-color: rgba(vars.$color-tiffany, 0.1);
   }
 }
 
 .deleteButton {
-  background-color: $color-white;
-  border: 1px solid $color-error;
-  color: $color-error;
+  background-color: vars.$color-white;
+  border: 1px solid vars.$color-error;
+  color: vars.$color-error;
   
   &:hover {
-    background-color: rgba($color-error, 0.1);
+    background-color: rgba(vars.$color-error, 0.1);
   }
 }
 
@@ -485,51 +485,51 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px dashed $color-border;
-  border-radius: $border-radius-md;
-  padding: $spacing-lg;
-  color: $color-text-medium;
+  border: 1px dashed vars.$color-border;
+  border-radius: vars.$border-radius-md;
+  padding: vars.$spacing-lg;
+  color: vars.$color-text-medium;
   
   p {
-    margin: $spacing-md 0;
+    margin: vars.$spacing-md 0;
   }
 }
 
 .addButton {
-  padding: $spacing-sm $spacing-lg;
-  background-color: $color-white;
-  border: 1px solid $color-tiffany;
-  color: $color-tiffany;
-  border-radius: $border-radius-sm;
+  padding: vars.$spacing-sm vars.$spacing-lg;
+  background-color: vars.$color-white;
+  border: 1px solid vars.$color-tiffany;
+  color: vars.$color-tiffany;
+  border-radius: vars.$border-radius-sm;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: $color-tiffany;
-    color: $color-white;
+    background-color: vars.$color-tiffany;
+    color: vars.$color-white;
   }
 }
 
 .settingsForm {
-  margin-bottom: $spacing-xl;
+  margin-bottom: vars.$spacing-xl;
 }
 
 .passwordSection {
-  margin: $spacing-lg 0;
-  padding-top: $spacing-lg;
-  border-top: 1px solid $color-border;
+  margin: vars.$spacing-lg 0;
+  padding-top: vars.$spacing-lg;
+  border-top: 1px solid vars.$color-border;
 }
 
 .togglePasswordButton {
   background: none;
   border: none;
-  color: $color-tiffany;
+  color: vars.$color-tiffany;
   font-weight: 500;
   cursor: pointer;
   padding: 0;
-  margin-bottom: $spacing-md;
+  margin-bottom: vars.$spacing-md;
   
   &:hover {
     text-decoration: underline;
@@ -538,74 +538,74 @@
 
 .saveButton {
   width: 100%;
-  padding: $spacing-md;
-  background-color: $color-tiffany;
-  color: $color-white;
+  padding: vars.$spacing-md;
+  background-color: vars.$color-tiffany;
+  color: vars.$color-white;
   border: none;
-  border-radius: $border-radius-md;
+  border-radius: vars.$border-radius-md;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
   
   &:hover {
-    background-color: darken($color-tiffany, 10%);
+    background-color: vars.shade-color(vars.$color-tiffany, 10%);
   }
   
   &:disabled {
-    background-color: $color-gray-medium;
+    background-color: vars.$color-gray-medium;
     cursor: not-allowed;
   }
 }
 
 .dangerZone {
-  margin-top: $spacing-xl;
-  padding-top: $spacing-lg;
-  border-top: 1px solid $color-border;
+  margin-top: vars.$spacing-xl;
+  padding-top: vars.$spacing-lg;
+  border-top: 1px solid vars.$color-border;
   
   h3 {
-    color: $color-error;
+    color: vars.$color-error;
     font-size: 1.1rem;
-    margin-bottom: $spacing-md;
+    margin-bottom: vars.$spacing-md;
   }
 }
 
 .logoutButton, .deleteAccountButton {
   display: block;
   width: 100%;
-  padding: $spacing-md;
-  border-radius: $border-radius-md;
+  padding: vars.$spacing-md;
+  border-radius: vars.$border-radius-md;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
-  margin-bottom: $spacing-md;
+  margin-bottom: vars.$spacing-md;
 }
 
 .logoutButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $color-gray-light;
-  color: $color-text-dark;
+  background-color: vars.$color-gray-light;
+  color: vars.$color-text-dark;
   
   .icon {
-    margin-right: $spacing-sm;
+    margin-right: vars.$spacing-sm;
   }
   
   &:hover {
-    background-color: darken($color-gray-light, 10%);
+    background-color: vars.shade-color(vars.$color-gray-light, 10%);
   }
 }
 
 .deleteAccountButton {
-  background-color: $color-white;
-  border: 1px solid $color-error;
-  color: $color-error;
+  background-color: vars.$color-white;
+  border: 1px solid vars.$color-error;
+  color: vars.$color-error;
   
   &:hover {
-    background-color: $color-error;
-    color: $color-white;
+    background-color: vars.$color-error;
+    color: vars.$color-white;
   }
 }

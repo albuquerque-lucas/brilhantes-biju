@@ -1,20 +1,20 @@
-@import '../styles/variables';
+@use '../styles/variables' as vars;
 
 .categoryGridContainer {
-  margin-bottom: $spacing-xl;
+  margin-bottom: vars.$spacing-xl;
 }
 
 .sectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
   
   .sectionTitle {
-    font-size: $font-size-xl;
+    font-size: vars.$font-size-xl;
     font-weight: 600;
     position: relative;
-    padding-bottom: $spacing-sm;
+    padding-bottom: vars.$spacing-sm;
     
     &:after {
       content: '';
@@ -23,7 +23,7 @@
       left: 0;
       width: 60px;
       height: 3px;
-      background-color: $primary-color;
+      background-color: vars.$primary-color;
     }
   }
 }
@@ -31,17 +31,17 @@
 .categoryGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: $spacing-lg;
+  gap: vars.$spacing-lg;
   
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: vars.$breakpoint-lg) {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: vars.$breakpoint-md) {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @media (max-width: $breakpoint-xs) {
+  @media (max-width: vars.$breakpoint-xs) {
     grid-template-columns: 1fr;
   }
 }

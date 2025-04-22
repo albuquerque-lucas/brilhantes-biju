@@ -1,26 +1,26 @@
-@import '../styles/variables';
+@use '../styles/variables' as vars;
 
 .footer {
-  background-color: $light-background;
-  color: $text-color;
-  margin-top: $spacing-xxl;
+  background-color: vars.$light-background;
+  color: vars.$text-color;
+  margin-top: vars.$spacing-xxl;
 }
 
 .footerTop {
-  padding: $spacing-xl 0;
-  border-bottom: 1px solid $border-color;
+  padding: vars.$spacing-xl 0;
+  border-bottom: 1px solid vars.$border-color;
 }
 
 .footerGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: $spacing-xl;
+  gap: vars.$spacing-xl;
   
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: vars.$breakpoint-md) {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @media (max-width: $breakpoint-xs) {
+  @media (max-width: vars.$breakpoint-xs) {
     grid-template-columns: 1fr;
   }
 }
@@ -28,7 +28,7 @@
 .footerInfo {
   .footerLogo {
     display: block;
-    margin-bottom: $spacing-md;
+    margin-bottom: vars.$spacing-md;
     
     img {
       height: 50px;
@@ -37,16 +37,16 @@
   }
   
   .footerDescription {
-    margin-bottom: $spacing-md;
-    color: $light-text-color;
-    font-size: $font-size-sm;
+    margin-bottom: vars.$spacing-md;
+    color: vars.$light-text-color;
+    font-size: vars.$font-size-sm;
     line-height: 1.6;
   }
 }
 
 .socialLinks {
   display: flex;
-  gap: $spacing-md;
+  gap: vars.$spacing-md;
   
   a {
     display: flex;
@@ -54,13 +54,13 @@
     justify-content: center;
     width: 36px;
     height: 36px;
-    background-color: $primary-color;
+    background-color: vars.$primary-color;
     color: white;
-    border-radius: $border-radius-circle;
-    transition: background-color $transition-normal, transform $transition-normal;
+    border-radius: vars.$border-radius-circle;
+    transition: background-color vars.$transition-normal, transform vars.$transition-normal;
     
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: vars.shade-color(vars.$primary-color, 10%);
       transform: translateY(-3px);
     }
   }
@@ -68,11 +68,11 @@
 
 .footerLinks {
   h3 {
-    font-size: $font-size-md;
+    font-size: vars.$font-size-md;
     font-weight: 600;
-    margin-bottom: $spacing-md;
+    margin-bottom: vars.$spacing-md;
     position: relative;
-    padding-bottom: $spacing-sm;
+    padding-bottom: vars.$spacing-sm;
     
     &:after {
       content: '';
@@ -81,7 +81,7 @@
       left: 0;
       width: 40px;
       height: 2px;
-      background-color: $primary-color;
+      background-color: vars.$primary-color;
     }
   }
   
@@ -91,16 +91,16 @@
     margin: 0;
     
     li {
-      margin-bottom: $spacing-sm;
+      margin-bottom: vars.$spacing-sm;
       
       a {
-        color: $light-text-color;
-        font-size: $font-size-sm;
-        transition: color $transition-normal, padding-left $transition-normal;
+        color: vars.$light-text-color;
+        font-size: vars.$font-size-sm;
+        transition: color vars.$transition-normal, padding-left vars.$transition-normal;
         
         &:hover {
-          color: $primary-color;
-          padding-left: $spacing-sm;
+          color: vars.$primary-color;
+          padding-left: vars.$spacing-sm;
         }
       }
     }
@@ -109,11 +109,11 @@
 
 .footerNewsletter {
   h3 {
-    font-size: $font-size-md;
+    font-size: vars.$font-size-md;
     font-weight: 600;
-    margin-bottom: $spacing-md;
+    margin-bottom: vars.$spacing-md;
     position: relative;
-    padding-bottom: $spacing-sm;
+    padding-bottom: vars.$spacing-sm;
     
     &:after {
       content: '';
@@ -122,14 +122,14 @@
       left: 0;
       width: 40px;
       height: 2px;
-      background-color: $primary-color;
+      background-color: vars.$primary-color;
     }
   }
   
   p {
-    margin-bottom: $spacing-md;
-    color: $light-text-color;
-    font-size: $font-size-sm;
+    margin-bottom: vars.$spacing-md;
+    color: vars.$light-text-color;
+    font-size: vars.$font-size-sm;
   }
   
   .formGroup {
@@ -137,71 +137,71 @@
     
     input {
       width: 100%;
-      padding: $spacing-sm $spacing-xl $spacing-sm $spacing-md;
-      border: 1px solid $border-color;
-      border-radius: $border-radius-md;
-      font-size: $font-size-sm;
+      padding: vars.$spacing-sm vars.$spacing-xl vars.$spacing-sm vars.$spacing-md;
+      border: 1px solid vars.$border-color;
+      border-radius: vars.$border-radius-md;
+      font-size: vars.$font-size-sm;
       
       &:focus {
-        border-color: $primary-color;
+        border-color: vars.$primary-color;
         outline: none;
       }
     }
     
     button {
       position: absolute;
-      right: $spacing-sm;
+      right: vars.$spacing-sm;
       top: 50%;
       transform: translateY(-50%);
       background: none;
       border: none;
-      color: $primary-color;
+      color: vars.$primary-color;
       cursor: pointer;
-      transition: color $transition-normal;
+      transition: color vars.$transition-normal;
       
       &:hover {
-        color: darken($primary-color, 10%);
+        color: vars.shade-color(vars.$primary-color, 10%);
       }
     }
   }
 }
 
 .footerBottom {
-  padding: $spacing-md 0;
+  padding: vars.$spacing-md 0;
   
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-    @media (max-width: $breakpoint-sm) {
+    @media (max-width: vars.$breakpoint-sm) {
       flex-direction: column;
-      gap: $spacing-md;
+      gap: vars.$spacing-md;
       text-align: center;
     }
   }
   
   p {
-    font-size: $font-size-xs;
-    color: $light-text-color;
+    font-size: vars.$font-size-xs;
+    color: vars.$light-text-color;
   }
 }
 
 .footerBottomLinks {
   display: flex;
-  gap: $spacing-md;
+  gap: vars.$spacing-md;
   
   a {
-    font-size: $font-size-xs;
-    color: $light-text-color;
+    font-size: vars.$font-size-xs;
+    color: vars.$light-text-color;
     
     &:hover {
-      color: $primary-color;
+      color: vars.$primary-color;
     }
   }
   
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: vars.$breakpoint-sm) {
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: vars.$spacing-sm;
   }
 }

@@ -1,20 +1,20 @@
-@import '../styles/variables';
+@use '../styles/variables' as vars;
 
 .productGridContainer {
-  margin-bottom: $spacing-xl;
+  margin-bottom: vars.$spacing-xl;
 }
 
 .sectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: $spacing-lg;
+  margin-bottom: vars.$spacing-lg;
   
   .sectionTitle {
-    font-size: $font-size-xl;
+    font-size: vars.$font-size-xl;
     font-weight: 600;
     position: relative;
-    padding-bottom: $spacing-sm;
+    padding-bottom: vars.$spacing-sm;
     
     &:after {
       content: '';
@@ -23,17 +23,17 @@
       left: 0;
       width: 60px;
       height: 3px;
-      background-color: $primary-color;
+      background-color: vars.$primary-color;
     }
   }
   
   .viewAllLink {
-    color: $primary-color;
+    color: vars.$primary-color;
     font-weight: 500;
-    transition: color $transition-normal;
+    transition: color vars.$transition-normal;
     
     &:hover {
-      color: darken($primary-color, 10%);
+      color: vars.shade-color(vars.$primary-color, 10%);
     }
   }
 }
@@ -41,7 +41,7 @@
 .viewControls {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: $spacing-md;
+  margin-bottom: vars.$spacing-md;
   
   .viewButton {
     display: flex;
@@ -49,22 +49,22 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: $light-background;
-    border: 1px solid $border-color;
+    background-color: vars.$light-background;
+    border: 1px solid vars.$border-color;
     cursor: pointer;
-    transition: background-color $transition-normal, border-color $transition-normal;
+    transition: background-color vars.$transition-normal, border-color vars.$transition-normal;
     
     &:first-child {
-      border-radius: $border-radius-sm 0 0 $border-radius-sm;
+      border-radius: vars.$border-radius-sm 0 0 vars.$border-radius-sm;
     }
     
     &:last-child {
-      border-radius: 0 $border-radius-sm $border-radius-sm 0;
+      border-radius: 0 vars.$border-radius-sm vars.$border-radius-sm 0;
     }
     
     &.active {
-      background-color: $primary-color;
-      border-color: $primary-color;
+      background-color: vars.$primary-color;
+      border-color: vars.$primary-color;
       
       .gridIcon, .listIcon {
         background-color: white;
@@ -82,7 +82,7 @@
       content: '';
       width: 4px;
       height: 4px;
-      background-color: $text-color;
+      background-color: vars.$text-color;
       grid-column: 1;
       grid-row: 1;
     }
@@ -91,7 +91,7 @@
       content: '';
       width: 4px;
       height: 4px;
-      background-color: $text-color;
+      background-color: vars.$text-color;
       grid-column: 2;
       grid-row: 1;
     }
@@ -107,7 +107,7 @@
       content: '';
       height: 2px;
       width: 100%;
-      background-color: $text-color;
+      background-color: vars.$text-color;
     }
   }
 }
@@ -115,17 +115,17 @@
 .productGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: $spacing-lg;
+  gap: vars.$spacing-lg;
   
-  @media (max-width: $breakpoint-lg) {
+  @media (max-width: vars.$breakpoint-lg) {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: vars.$breakpoint-md) {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @media (max-width: $breakpoint-xs) {
+  @media (max-width: vars.$breakpoint-xs) {
     grid-template-columns: 1fr;
   }
   

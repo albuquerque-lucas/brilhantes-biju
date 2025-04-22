@@ -1,4 +1,4 @@
-@import './_variables.scss';
+@use './_variables.scss' as vars;
 
 * {
   box-sizing: border-box;
@@ -12,8 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $color-background-light;
-  color: $color-text-dark;
+  background-color: vars.$color-background-light;
+  color: vars.$color-text-dark;
   line-height: 1.6;
 }
 
@@ -35,12 +35,12 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 $spacing-md;
+  padding: 0 vars.$spacing-md;
 }
 
-@media (min-width: $breakpoint-md) {
+@media (min-width: vars.$breakpoint-md) {
   .container {
-    padding: 0 $spacing-lg;
+    padding: 0 vars.$spacing-lg;
   }
 }
 

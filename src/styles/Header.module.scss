@@ -1,23 +1,23 @@
-@import '../styles/variables';
+@use '../styles/variables' as vars;
 
 .header {
   width: 100%;
-  background-color: $background-color;
-  box-shadow: $shadow-sm;
+  background-color: vars.$background-color;
+  box-shadow: vars.$shadow-sm;
   position: sticky;
   top: 0;
-  z-index: $z-index-sticky;
-  transition: transform $transition-normal, box-shadow $transition-normal;
+  z-index: vars.$z-index-sticky;
+  transition: transform vars.$transition-normal, box-shadow vars.$transition-normal;
   
   &.scrolled {
-    box-shadow: $shadow-md;
+    box-shadow: vars.$shadow-md;
   }
 }
 
 .topBar {
-  background-color: $light-background;
-  padding: $spacing-sm 0;
-  font-size: $font-size-sm;
+  background-color: vars.$light-background;
+  padding: vars.$spacing-sm 0;
+  font-size: vars.$font-size-sm;
   
   .container {
     display: flex;
@@ -26,32 +26,32 @@
   }
   
   .contactInfo {
-    color: $light-text-color;
+    color: vars.$light-text-color;
   }
   
   .userActions {
     display: flex;
-    gap: $spacing-md;
+    gap: vars.$spacing-md;
   }
   
   .userLink {
     display: flex;
     align-items: center;
-    gap: $spacing-xs;
-    color: $light-text-color;
+    gap: vars.$spacing-xs;
+    color: vars.$light-text-color;
     
     &:hover {
-      color: $primary-color;
+      color: vars.$primary-color;
     }
     
     svg {
-      font-size: $font-size-md;
+      font-size: vars.$font-size-md;
     }
   }
 }
 
 .mainHeader {
-  padding: $spacing-md 0;
+  padding: vars.$spacing-md 0;
   
   .container {
     display: flex;
@@ -63,10 +63,10 @@
     display: none;
     background: none;
     border: none;
-    font-size: $font-size-lg;
-    color: $text-color;
+    font-size: vars.$font-size-lg;
+    color: vars.$text-color;
     
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: vars.$breakpoint-md) {
       display: block;
     }
   }
@@ -84,7 +84,7 @@
 .searchBar {
   flex: 1;
   max-width: 500px;
-  margin: 0 $spacing-xl;
+  margin: 0 vars.$spacing-xl;
   
   form {
     display: flex;
@@ -93,35 +93,35 @@
   
   input {
     width: 100%;
-    padding: $spacing-sm $spacing-lg;
-    border: 1px solid $border-color;
-    border-radius: $border-radius-md;
-    transition: border-color $transition-normal, box-shadow $transition-normal;
+    padding: vars.$spacing-sm vars.$spacing-lg;
+    border: 1px solid vars.$border-color;
+    border-radius: vars.$border-radius-md;
+    transition: border-color vars.$transition-normal, box-shadow vars.$transition-normal;
     
     &:focus {
-      border-color: $primary-color;
-      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+      border-color: vars.$primary-color;
+      box-shadow: 0 0 0 2px rgba(vars.$primary-color, 0.2);
       outline: none;
     }
   }
   
   button {
     position: absolute;
-    right: $spacing-sm;
+    right: vars.$spacing-sm;
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: $light-text-color;
-    font-size: $font-size-md;
+    color: vars.$light-text-color;
+    font-size: vars.$font-size-md;
     cursor: pointer;
     
     &:hover {
-      color: $primary-color;
+      color: vars.$primary-color;
     }
   }
   
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: vars.$breakpoint-md) {
     display: none;
   }
 }
@@ -133,24 +133,24 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  color: $text-color;
-  font-size: $font-size-lg;
+  color: vars.$text-color;
+  font-size: vars.$font-size-lg;
   
   &:hover {
-    color: $primary-color;
+    color: vars.$primary-color;
   }
   
   .cartCount {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: $primary-color;
+    background-color: vars.$primary-color;
     color: white;
-    font-size: $font-size-xs;
+    font-size: vars.$font-size-xs;
     font-weight: bold;
     width: 20px;
     height: 20px;
-    border-radius: $border-radius-circle;
+    border-radius: vars.$border-radius-circle;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,7 +158,7 @@
 }
 
 .mainNav {
-  background-color: $primary-color;
+  background-color: vars.$primary-color;
   
   .container {
     display: flex;
@@ -176,28 +176,28 @@
       
       a {
         display: block;
-        padding: $spacing-md $spacing-lg;
+        padding: vars.$spacing-md vars.$spacing-lg;
         color: white;
         font-weight: 500;
-        transition: background-color $transition-normal;
+        transition: background-color vars.$transition-normal;
         
         &:hover, &.active {
-          background-color: darken($primary-color, 10%);
+          background-color: vars.shade-color(vars.$primary-color, 10%);
         }
       }
     }
   }
   
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: vars.$breakpoint-md) {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba($text-color, 0.9);
+    background-color: rgba(vars.$text-color, 0.9);
     transform: translateX(-100%);
-    transition: transform $transition-normal;
-    z-index: $z-index-modal;
+    transition: transform vars.$transition-normal;
+    z-index: vars.$z-index-modal;
     
     &.open {
       transform: translateX(0);
@@ -216,7 +216,7 @@
         width: 100%;
         
         a {
-          padding: $spacing-lg;
+          padding: vars.$spacing-lg;
           text-align: center;
         }
       }

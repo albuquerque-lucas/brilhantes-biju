@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@use '../styles/variables' as vars;
 
 .layoutContainer {
   display: flex;
@@ -8,5 +8,5 @@
 
 .mainContent {
   flex: 1;
-  padding-top: $spacing-md;
+  padding-top: vars.$spacing-md;
 }

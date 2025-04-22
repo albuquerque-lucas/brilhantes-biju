@@ -1,36 +1,36 @@
-@import '../../styles/variables';
+@use '../styles/variables' as vars;
 
 .pagSeguroCheckout {
   display: flex;
   flex-direction: column;
-  gap: $spacing-lg;
-  margin-bottom: $spacing-xl;
+  gap: vars.$spacing-lg;
+  margin-bottom: vars.$spacing-xl;
 
   h3 {
     font-size: 1.25rem;
-    margin-bottom: $spacing-md;
-    color: $text-color;
+    margin-bottom: vars.$spacing-md;
+    color: vars.$text-color;
     font-weight: 600;
   }
 
   .paymentMethods {
     .methodOptions {
       display: flex;
-      gap: $spacing-md;
+      gap: vars.$spacing-md;
       flex-wrap: wrap;
 
-      @media (max-width: $breakpoint-sm) {
+      @media (max-width: vars.$breakpoint-sm) {
         flex-direction: column;
       }
 
       .methodOption {
         display: flex;
         align-items: center;
-        gap: $spacing-sm;
-        padding: $spacing-md;
-        border: 1px solid $border-color;
-        border-radius: $border-radius;
-        background-color: $white;
+        gap: vars.$spacing-sm;
+        padding: vars.$spacing-md;
+        border: 1px solid vars.$border-color;
+        border-radius: vars.$border-radius;
+        background-color: vars.$white;
         cursor: pointer;
         transition: all 0.3s ease;
         flex: 1;
@@ -38,18 +38,18 @@
         font-size: 1rem;
 
         &:hover {
-          border-color: $primary-color-light;
+          border-color: vars.$primary-color-light;
         }
 
         &.active {
-          border-color: $primary-color;
-          background-color: rgba($primary-color, 0.05);
+          border-color: vars.$primary-color;
+          background-color: rgba(vars.$primary-color, 0.05);
           font-weight: 600;
         }
 
         svg {
           font-size: 1.5rem;
-          color: $primary-color;
+          color: vars.$primary-color;
         }
       }
     }
@@ -58,32 +58,32 @@
   .creditCardForm {
     display: flex;
     flex-direction: column;
-    gap: $spacing-md;
+    gap: vars.$spacing-md;
 
     .formGroup {
       display: flex;
       flex-direction: column;
-      gap: $spacing-xs;
+      gap: vars.$spacing-xs;
 
       label {
         font-size: 0.9rem;
-        color: $text-color-secondary;
+        color: vars.$text-color-secondary;
       }
 
       input, select {
-        padding: $spacing-sm;
-        border: 1px solid $border-color;
-        border-radius: $border-radius;
+        padding: vars.$spacing-sm;
+        border: 1px solid vars.$border-color;
+        border-radius: vars.$border-radius;
         font-size: 1rem;
 
         &:focus {
           outline: none;
-          border-color: $primary-color;
+          border-color: vars.$primary-color;
         }
       }
 
       .errorMessage {
-        color: $error-color;
+        color: vars.$error-color;
         font-size: 0.8rem;
         margin-top: 2px;
       }
@@ -91,9 +91,9 @@
 
     .formRow {
       display: flex;
-      gap: $spacing-md;
+      gap: vars.$spacing-md;
 
-      @media (max-width: $breakpoint-sm) {
+      @media (max-width: vars.$breakpoint-sm) {
         flex-direction: column;
       }
 
@@ -106,68 +106,68 @@
   .boletoPayment, .pixPayment {
     display: flex;
     flex-direction: column;
-    gap: $spacing-md;
+    gap: vars.$spacing-md;
 
     .paymentInfo {
-      background-color: rgba($primary-color, 0.05);
-      padding: $spacing-md;
-      border-radius: $border-radius;
-      border-left: 4px solid $primary-color;
+      background-color: rgba(vars.$primary-color, 0.05);
+      padding: vars.$spacing-md;
+      border-radius: vars.$border-radius;
+      border-left: 4px solid vars.$primary-color;
       font-size: 0.9rem;
       line-height: 1.5;
     }
   }
 
   .payButton {
-    background-color: $primary-color;
-    color: $white;
+    background-color: vars.$primary-color;
+    color: vars.$white;
     border: none;
-    border-radius: $border-radius;
-    padding: $spacing-md;
+    border-radius: vars.$border-radius;
+    padding: vars.$spacing-md;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: $spacing-md;
+    margin-top: vars.$spacing-md;
 
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: vars.shade-color(vars.$primary-color, 10%);
     }
 
     &:disabled {
-      background-color: $disabled-color;
+      background-color: vars.$disabled-color;
       cursor: not-allowed;
     }
   }
 
   .orderSummary {
-    background-color: $background-color-light;
-    padding: $spacing-lg;
-    border-radius: $border-radius;
-    margin-top: $spacing-md;
+    background-color: vars.$background-color-light;
+    padding: vars.$spacing-lg;
+    border-radius: vars.$border-radius;
+    margin-top: vars.$spacing-md;
 
     .summaryItem {
       display: flex;
       justify-content: space-between;
-      margin-bottom: $spacing-sm;
+      margin-bottom: vars.$spacing-sm;
       font-size: 1rem;
 
       &.totalItem {
         font-weight: 700;
         font-size: 1.2rem;
-        margin-top: $spacing-md;
-        padding-top: $spacing-md;
-        border-top: 1px solid $border-color;
+        margin-top: vars.$spacing-md;
+        padding-top: vars.$spacing-md;
+        border-top: 1px solid vars.$border-color;
       }
     }
 
     .freeShipping {
-      color: $success-color;
+      color: vars.$success-color;
       font-weight: 600;
     }
 
     .discount {
-      color: $success-color;
+      color: vars.$success-color;
       font-weight: 600;
     }
   }

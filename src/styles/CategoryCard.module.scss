@@ -1,16 +1,16 @@
-@import '../styles/variables';
+@use '../styles/variables' as vars;
 
 .categoryCard {
   display: block;
   position: relative;
-  border-radius: $border-radius-md;
+  border-radius: vars.$border-radius-md;
   overflow: hidden;
-  box-shadow: $shadow-sm;
-  transition: transform $transition-normal, box-shadow $transition-normal;
+  box-shadow: vars.$shadow-sm;
+  transition: transform vars.$transition-normal, box-shadow vars.$transition-normal;
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: $shadow-md;
+    box-shadow: vars.$shadow-md;
     
     .categoryImage img {
       transform: scale(1.05);
@@ -31,7 +31,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform $transition-normal;
+    transition: transform vars.$transition-normal;
   }
 }
 
@@ -41,12 +41,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($primary-color, 0.7);
+  background-color: rgba(vars.$primary-color, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity $transition-normal;
+  transition: opacity vars.$transition-normal;
   
   &.hovered {
     opacity: 1;
@@ -56,31 +56,31 @@
 .viewCategory {
   color: white;
   font-weight: 600;
-  padding: $spacing-sm $spacing-md;
+  padding: vars.$spacing-sm vars.$spacing-md;
   border: 2px solid white;
-  border-radius: $border-radius-sm;
-  transition: background-color $transition-normal;
+  border-radius: vars.$border-radius-sm;
+  transition: background-color vars.$transition-normal;
   
   &:hover {
     background-color: white;
-    color: $primary-color;
+    color: vars.$primary-color;
   }
 }
 
 .categoryInfo {
-  padding: $spacing-md;
-  background-color: $background-color;
+  padding: vars.$spacing-md;
+  background-color: vars.$background-color;
   text-align: center;
 }
 
 .categoryName {
-  font-size: $font-size-md;
+  font-size: vars.$font-size-md;
   font-weight: 600;
-  margin-bottom: $spacing-xs;
-  color: $text-color;
+  margin-bottom: vars.$spacing-xs;
+  color: vars.$text-color;
 }
 
 .productCount {
-  font-size: $font-size-sm;
-  color: $light-text-color;
+  font-size: vars.$font-size-sm;
+  color: vars.$light-text-color;
 }

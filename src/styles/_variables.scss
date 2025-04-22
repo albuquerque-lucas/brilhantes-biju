@@ -16,6 +16,18 @@ $color-error-light: #FFEBEE;
 $color-success: #388E3C;
 $color-warning: #F57C00;
 
+// Aliases para compatibilidade com componentes existentes
+$primary-color: $color-tiffany;
+$accent-color: $color-gold;
+$white: $color-white;
+$black: $color-black;
+$text-color: $color-text-dark;
+$text-color-light: $color-text-light;
+$light-text-color: $color-text-medium;
+$border-color: $color-border;
+$background-color: $color-white;
+$light-background: $color-background-light;
+
 // Espaçamento
 $spacing-xs: 4px;
 $spacing-sm: 8px;
@@ -28,13 +40,19 @@ $spacing-xxl: 48px;
 $border-radius-sm: 4px;
 $border-radius-md: 8px;
 $border-radius-lg: 12px;
+$border-radius-circle: 50%;
+$border-radius: $border-radius-md; // Alias para compatibilidade
 
 // Sombras
 $box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
 $box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
 $box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+$shadow-sm: $box-shadow-sm; // Alias para compatibilidade
+$shadow-md: $box-shadow-md; // Alias para compatibilidade
+$shadow-lg: $box-shadow-lg; // Alias para compatibilidade
 
 // Breakpoints
+$breakpoint-xs: 480px;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
@@ -44,3 +62,25 @@ $breakpoint-xl: 1200px;
 $transition-fast: 0.2s ease;
 $transition-normal: 0.3s ease;
 $transition-slow: 0.5s ease;
+
+// Tamanhos de fonte
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Função para substituir darken()
+@function shade-color($color, $percentage) {
+  @return mix($black, $color, $percentage);
+}
