@@ -1,7 +1,7 @@
-@import '../styles/variables';
+@import './variables';
 
 .footer {
-  background-color: $light-background;
+  background-color: $color-background-light;
   color: $text-color;
   margin-top: $spacing-xxl;
 }
@@ -54,13 +54,13 @@
     justify-content: center;
     width: 36px;
     height: 36px;
-    background-color: $primary-color;
+    background-color: color-tiffany-color;
     color: white;
     border-radius: $border-radius-circle;
     transition: background-color $transition-normal, transform $transition-normal;
     
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: darken(color-tiffany-color, 10%);
       transform: translateY(-3px);
     }
   }
@@ -81,7 +81,7 @@
       left: 0;
       width: 40px;
       height: 2px;
-      background-color: $primary-color;
+      background-color: color-tiffany-color;
     }
   }
   
@@ -99,7 +99,7 @@
         transition: color $transition-normal, padding-left $transition-normal;
         
         &:hover {
-          color: $primary-color;
+          color: color-tiffany-color;
           padding-left: $spacing-sm;
         }
       }
@@ -122,7 +122,7 @@
       left: 0;
       width: 40px;
       height: 2px;
-      background-color: $primary-color;
+      background-color: color-tiffany-color;
     }
   }
   
@@ -143,7 +143,7 @@
       font-size: $font-size-sm;
       
       &:focus {
-        border-color: $primary-color;
+        border-color: color-tiffany-color;
         outline: none;
       }
     }
@@ -155,12 +155,12 @@
       transform: translateY(-50%);
       background: none;
       border: none;
-      color: $primary-color;
+      color: color-tiffany-color;
       cursor: pointer;
       transition: color $transition-normal;
       
       &:hover {
-        color: darken($primary-color, 10%);
+        color: darken(color-tiffany-color, 10%);
       }
     }
   }
@@ -196,7 +196,7 @@
     color: $light-text-color;
     
     &:hover {
-      color: $primary-color;
+      color: color-tiffany-color;
     }
   }
   

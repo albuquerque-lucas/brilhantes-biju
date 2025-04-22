@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '.././variables';
 
 .productCard {
   position: relative;
@@ -58,7 +58,7 @@
     
     &.newBadge {
       left: $spacing-sm;
-      background-color: $primary-color;
+      background-color: color-tiffany-color;
       color: $white;
     }
     
@@ -98,8 +98,8 @@
       transition: all 0.2s ease;
       
       &:hover {
-        background-color: $primary-color;
-        border-color: $primary-color;
+        background-color: color-tiffany-color;
+        border-color: color-tiffany-color;
         color: $white;
       }
     }
@@ -140,7 +140,7 @@
     .price {
       font-size: 1.1rem;
       font-weight: 600;
-      color: $primary-color;
+      color: color-tiffany-color;
     }
   }
   

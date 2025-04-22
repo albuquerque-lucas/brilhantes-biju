@@ -1,11 +1,11 @@
-@import '../styles/variables';
+@import './variables';
 
 .bannerContainer {
   position: relative;
   margin-bottom: $spacing-xl;
   overflow: hidden;
   border-radius: $border-radius-md;
-  box-shadow: $shadow-md;
+  box-shadow: $box-shadow-md;
 }
 
 .bannerSlider {
@@ -100,7 +100,7 @@
 .bannerButton {
   display: inline-block;
   padding: $spacing-sm $spacing-lg;
-  background-color: $primary-color;
+  background-color: color-tiffany-color;
   color: white;
   font-weight: 500;
   border-radius: $border-radius-sm;
@@ -109,7 +109,7 @@
   opacity: 0;
   
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background-color: darken(color-tiffany-color, 10%);
     transform: translateY(-3px);
     color: white;
   }
@@ -177,7 +177,7 @@
   transition: background-color $transition-normal, transform $transition-normal;
   
   &.active {
-    background-color: $primary-color;
+    background-color: color-tiffany-color;
     transform: scale(1.2);
   }
   

@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@import './variables';
 
 .productGridContainer {
   margin-bottom: $spacing-xl;
@@ -23,17 +23,17 @@
       left: 0;
       width: 60px;
       height: 3px;
-      background-color: $primary-color;
+      background-color: color-tiffany-color;
     }
   }
   
   .viewAllLink {
-    color: $primary-color;
+    color: color-tiffany-color;
     font-weight: 500;
     transition: color $transition-normal;
     
     &:hover {
-      color: darken($primary-color, 10%);
+      color: darken(color-tiffany-color, 10%);
     }
   }
 }
@@ -49,7 +49,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: $light-background;
+    background-color: $color-background-light;
     border: 1px solid $border-color;
     cursor: pointer;
     transition: background-color $transition-normal, border-color $transition-normal;
@@ -63,8 +63,8 @@
     }
     
     &.active {
-      background-color: $primary-color;
-      border-color: $primary-color;
+      background-color: color-tiffany-color;
+      border-color: color-tiffany-color;
       
       .gridIcon, .listIcon {
         background-color: white;

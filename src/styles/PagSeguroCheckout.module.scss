@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '.././variables';
 
 .pagSeguroCheckout {
   display: flex;
@@ -38,18 +38,18 @@
         font-size: 1rem;
 
         &:hover {
-          border-color: $primary-color-light;
+          border-color: color-tiffany-color-light;
         }
 
         &.active {
-          border-color: $primary-color;
-          background-color: rgba($primary-color, 0.05);
+          border-color: color-tiffany-color;
+          background-color: rgba(color-tiffany-color, 0.05);
           font-weight: 600;
         }
 
         svg {
           font-size: 1.5rem;
-          color: $primary-color;
+          color: color-tiffany-color;
         }
       }
     }
@@ -78,7 +78,7 @@
 
         &:focus {
           outline: none;
-          border-color: $primary-color;
+          border-color: color-tiffany-color;
         }
       }
 
@@ -109,17 +109,17 @@
     gap: $spacing-md;
 
     .paymentInfo {
-      background-color: rgba($primary-color, 0.05);
+      background-color: rgba(color-tiffany-color, 0.05);
       padding: $spacing-md;
       border-radius: $border-radius;
-      border-left: 4px solid $primary-color;
+      border-left: 4px solid color-tiffany-color;
       font-size: 0.9rem;
       line-height: 1.5;
     }
   }
 
   .payButton {
-    background-color: $primary-color;
+    background-color: color-tiffany-color;
     color: $white;
     border: none;
     border-radius: $border-radius;
@@ -131,7 +131,7 @@
     margin-top: $spacing-md;
 
     &:hover {
-      background-color: darken($primary-color, 10%);
+      background-color: darken(color-tiffany-color, 10%);
     }
 
     &:disabled {
@@ -162,12 +162,12 @@
     }
 
     .freeShipping {
-      color: $success-color;
+      color: $color-success-color;
       font-weight: 600;
     }
 
     .discount {
-      color: $success-color;
+      color: $color-success-color;
       font-weight: 600;
     }
   }

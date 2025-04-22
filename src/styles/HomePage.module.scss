@@ -1,4 +1,4 @@
-@import '../styles/variables';
+@import './variables';
 
 .homePage {
   .container {
@@ -14,7 +14,7 @@
 
 .categoriesSection {
   padding: $spacing-xl 0;
-  background-color: $light-background;
+  background-color: $color-background-light;
   margin-bottom: $spacing-xl;
 }
 
@@ -45,7 +45,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to right, rgba($primary-color, 0.8), rgba($primary-color, 0.4));
+      background: linear-gradient(to right, rgba(color-tiffany-color, 0.8), rgba(color-tiffany-color, 0.4));
     }
   }
   
@@ -76,7 +76,7 @@
     display: inline-block;
     padding: $spacing-sm $spacing-lg;
     background-color: white;
-    color: $primary-color;
+    color: color-tiffany-color;
     font-weight: 600;
     border-radius: $border-radius-sm;
     transition: background-color $transition-normal, transform $transition-normal;
@@ -95,5 +95,5 @@
   align-items: center;
   height: 300px;
   font-size: $font-size-lg;
-  color: $primary-color;
+  color: color-tiffany-color;
 }

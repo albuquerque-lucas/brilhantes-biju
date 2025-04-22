@@ -1,21 +1,21 @@
-@import '../styles/variables';
+@import './variables';
 
 .header {
   width: 100%;
   background-color: $background-color;
-  box-shadow: $shadow-sm;
+  box-shadow: $box-shadow-sm;
   position: sticky;
   top: 0;
   z-index: $z-index-sticky;
   transition: transform $transition-normal, box-shadow $transition-normal;
   
   &.scrolled {
-    box-shadow: $shadow-md;
+    box-shadow: $box-shadow-md;
   }
 }
 
 .topBar {
-  background-color: $light-background;
+  background-color: $color-background-light;
   padding: $spacing-sm 0;
   font-size: $font-size-sm;
   
@@ -41,7 +41,7 @@
     color: $light-text-color;
     
     &:hover {
-      color: $primary-color;
+      color: color-tiffany-color;
     }
     
     svg {
@@ -99,8 +99,8 @@
     transition: border-color $transition-normal, box-shadow $transition-normal;
     
     &:focus {
-      border-color: $primary-color;
-      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+      border-color: color-tiffany-color;
+      box-shadow: 0 0 0 2px rgba(color-tiffany-color, 0.2);
       outline: none;
     }
   }
@@ -117,7 +117,7 @@
     cursor: pointer;
     
     &:hover {
-      color: $primary-color;
+      color: color-tiffany-color;
     }
   }
   
@@ -137,14 +137,14 @@
   font-size: $font-size-lg;
   
   &:hover {
-    color: $primary-color;
+    color: color-tiffany-color;
   }
   
   .cartCount {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: $primary-color;
+    background-color: color-tiffany-color;
     color: white;
     font-size: $font-size-xs;
     font-weight: bold;
@@ -158,7 +158,7 @@
 }
 
 .mainNav {
-  background-color: $primary-color;
+  background-color: color-tiffany-color;
   
   .container {
     display: flex;
@@ -182,7 +182,7 @@
         transition: background-color $transition-normal;
         
         &:hover, &.active {
-          background-color: darken($primary-color, 10%);
+          background-color: darken(color-tiffany-color, 10%);
         }
       }
     }

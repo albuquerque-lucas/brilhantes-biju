@@ -1,0 +1,109 @@
+@import './variables';
+
+.checkoutPage {
+  padding: 2rem;
+  background-color: $color-background-light;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.checkoutContent {
+  background: white;
+  padding: 2rem;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-md;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: $border-radius-md;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: $box-shadow-lg;
+}
+
+.modalHeader {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $gray-300;
+}
+
+.success {
+  color: $color-success;
+}
+
+.error {
+  color: $color-error;
+}
+
+.modalBody {
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  color: $text-color;
+}
+
+.transactionInfo,
+.statusInfo,
+.paymentUrlInfo {
+  margin-top: 1rem;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.viewPaymentButton {
+  background-color: color-tiffany;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-tiffany, 10%);
+  }
+}
+
+.continueButton {
+  background-color: $secondary;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($secondary, 10%);
+  }
+}
