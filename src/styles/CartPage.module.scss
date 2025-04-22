@@ -1,0 +1,304 @@
+@import './variables';
+
+.cartPage {
+  padding: 2rem;
+  background-color: $color-background-light;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.continueShopping {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: color-tiffany;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cartContent {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cartItems {
+  flex: 2;
+}
+
+.cartTable {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cartTableHeader,
+.cartItem {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartTableHeader {
+  font-weight: bold;
+  border-bottom: 1px solid $gray-300;
+  padding-bottom: 0.5rem;
+}
+
+.productCol {
+  display: flex;
+  align-items: center;
+}
+
+.productInfo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.productImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: $border-radius-sm;
+}
+
+.productDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.productVariations {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: $gray-600;
+}
+
+.priceCol,
+.quantityCol,
+.subtotalCol,
+.actionCol {
+  text-align: center;
+}
+
+.price {
+  font-weight: 500;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.quantityButton {
+  background-color: transparent;
+  border: 1px solid $gray-300;
+  padding: 0.3rem;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.quantity {
+  min-width: 2rem;
+  text-align: center;
+}
+
+.subtotal {
+  font-weight: 500;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  color: $color-error;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($color-error, 10%);
+  }
+}
+
+.cartActions {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.clearCartButton {
+  background-color: $color-error;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-error, 10%);
+  }
+}
+
+.cartSummary {
+  flex: 1;
+  border: 1px solid $gray-200;
+  border-radius: $border-radius-md;
+  padding: 1.5rem;
+  background-color: white;
+}
+
+.summaryTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summaryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalRow {
+  font-weight: bold;
+  border-top: 1px solid $gray-300;
+  padding-top: 0.5rem;
+}
+
+.totalPrice {
+  color: color-tiffany;
+}
+
+.installments {
+  font-size: 0.875rem;
+  color: $gray-600;
+  margin-top: 0.5rem;
+}
+
+.couponForm {
+  margin-top: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.couponInput {
+  display: flex;
+  gap: 0.5rem;
+
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid $gray-300;
+    border-radius: $border-radius-sm;
+  }
+}
+
+.applyCouponButton {
+  padding: 0.5rem 1rem;
+  background-color: color-tiffany;
+  color: white;
+  border: none;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-tiffany, 10%);
+  }
+}
+
+.couponError {
+  color: $color-error;
+  font-size: 0.875rem;
+}
+
+.couponSuccess {
+  color: $color-success;
+  font-size: 0.875rem;
+}
+
+.checkoutButton {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: $color-success;
+  color: white;
+  border-radius: $border-radius-sm;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($color-success, 10%);
+  }
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.emptyCartContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyCartIcon {
+  font-size: 3rem;
+  color: $gray-400;
+}
+
+.shopNowButton {
+  background-color: color-tiffany;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius-sm;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($color-tiffany, 10%);
+  }
+}

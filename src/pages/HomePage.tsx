@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
-import { FaImage, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight } from 'react-icons/fa';
 import Banner from '../components/ui/Banner';
 import CategoryGrid from '../components/categories/CategoryGrid';
 import ProductGrid from '../components/products/ProductGrid';
