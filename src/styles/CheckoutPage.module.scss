@@ -96,7 +96,7 @@
 }
 
 .continueButton {
-  background-color: $secondary;
+  background-color: $secondary-color;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -104,6 +104,6 @@
   cursor: pointer;
 
   &:hover {
-    background-color: darken($secondary, 10%);
+    background-color: darken($secondary-color, 10%);
   }
 }

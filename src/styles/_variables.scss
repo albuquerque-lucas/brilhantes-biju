@@ -27,6 +27,7 @@ $gray-700: #2D3748;
 
 // Aliases para compatibilidade com componentes existentes
 $primary-color: $color-tiffany;
+$secondary-color: $color-gray-light;
 $accent-color: $color-gold;
 $white: $color-white;
 $black: $color-black;
@@ -36,6 +37,9 @@ $light-text-color: $color-text-medium;
 $border-color: $color-border;
 $background-color: $color-white;
 $light-background: $color-background-light;
+$disabled-color: $color-gray-medium;
+
+$info: #0ABAB5;
 
 // Espaçamento
 $spacing-xs: 4px;
