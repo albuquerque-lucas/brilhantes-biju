@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import styles from '../../styles/ProductGrid.module.scss';
-import ProductCard, { ProductProps } from './ProductCard';
+import ProductCard from './ProductCard';
+import { Product } from '../../types';
 
 interface ProductGridProps {
-  products: ProductProps[];
+  products: Product[];
   title?: string;
   viewAllLink?: string;
 }
@@ -43,7 +44,7 @@ const ProductGrid = ({ products, title, viewAllLink }: ProductGridProps) => {
       
       <div className={`${styles.productGrid} ${viewMode === 'list' ? styles.listView : ''}`}>
         {products.map((product) => (
-          <ProductCard key={product.id} {...product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>

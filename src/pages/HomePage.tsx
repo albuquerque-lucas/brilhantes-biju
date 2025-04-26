@@ -181,6 +181,27 @@ const HomePage: React.FC = () => {
         buttonText="Conheça Agora"
         buttonLink="/categoria/lancamentos"
         backgroundImage="/src/assets/images/banner-main.jpg"
+        slides={[
+          {
+            id: '1',
+            image: '/src/assets/images/banner-slide-1.jpg',
+            title: 'Brilhe com Estilo',
+            subtitle: 'Descubra nossa nova coleção de bijuterias',
+            buttonText: 'Ver Coleção',
+            buttonLink: '/categoria/lancamentos',
+            length: 3
+          },
+          {
+            id: '2',
+            image: '/src/assets/images/banner-slide-2.jpg',
+            title: 'Acessórios que Encantam',
+            subtitle: 'Peças únicas para cada ocasião',
+            buttonText: 'Explorar Agora',
+            buttonLink: '/categoria/lancamentos',
+            length: 3
+          }
+        ]}
+        autoPlay={true}
       />
 
       <section className={styles.categoriesSection}>
@@ -195,7 +216,7 @@ const HomePage: React.FC = () => {
             </button>
           </div>
 
-          <CategoryGrid categories={featuredCategories} />
+          <CategoryGrid categories={featuredCategories} title='...' />
         </div>
       </section>
 

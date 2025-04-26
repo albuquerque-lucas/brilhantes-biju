@@ -8,9 +8,15 @@ interface BannerSlide {
   subtitle: string;
   buttonText: string;
   buttonLink: string;
+  length: number;
 }
 
 interface BannerProps {
+  title: string;
+  subtitle: string;
+  buttonText: string;
+  buttonLink: string;
+  backgroundImage: string;
   slides: BannerSlide[];
   autoPlay?: boolean;
   interval?: number;

@@ -119,7 +119,7 @@ export interface Category {
   description: string;
   image: string;
   slug: string;
-  productCount?: number;
+  productCount: number;
 }
 
 // Tipos para PagSeguro

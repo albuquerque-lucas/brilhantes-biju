@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaHeart, FaSearch } from 'react-icons/fa';
 import styles from '../../styles/ProductCard.module.scss';
 
-interface ProductCardProps {
+export type ProductCardProps = {
   product: Product;
   className?: string;
+  discount?: number;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, className = '' }) => {
