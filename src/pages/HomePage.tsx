@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import Banner from '../components/ui/Banner';
@@ -170,10 +169,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className={styles.homePage}>
-      <Helmet>
-        <title>Brilhante Biju - Bijuterias Elegantes e Sofisticadas</title>
-        <meta name="description" content="Descubra bijuterias elegantes e sofisticadas para todos os estilos na Brilhante Biju. Anéis, colares, brincos, pulseiras e bolsas com design exclusivo." />
-      </Helmet>
+      {/* Helmet component removed due to compatibility issues with React 19 */}
 
       <Banner 
         title="Nova Coleção Primavera"

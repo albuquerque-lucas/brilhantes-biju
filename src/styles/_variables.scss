@@ -27,18 +27,21 @@ $gray-700: #2D3748;
 
 // Aliases para compatibilidade com componentes existentes
 $primary-color: $color-tiffany;
+$primary-color-light: lighten($color-tiffany, 15%);
 $secondary-color: $color-gray-light;
 $accent-color: $color-gold;
 $white: $color-white;
 $black: $color-black;
 $text-color: $color-text-dark;
 $text-color-light: $color-text-light;
+$text-color-secondary: $color-text-medium;
 $light-text-color: $color-text-medium;
 $border-color: $color-border;
 $background-color: $color-white;
+$background-color-light: $color-background-light;
 $light-background: $color-background-light;
+$error-color: $color-error;
 $disabled-color: $color-gray-medium;
-
 $info: #0ABAB5;
 
 // Espaçamento
