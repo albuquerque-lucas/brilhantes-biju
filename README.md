@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este projeto é uma conversão do site Brilhante Biju de HTML/CSS/JavaScript para uma aplicação moderna em React com TypeScript. A aplicação é um e-commerce completo para venda de bijuterias, com funcionalidades como catálogo de produtos, carrinho de compras, checkout com integração PagSeguro, e sistema de autenticação com login social.
+Este projeto é uma conversão do site Brilhante Biju de HTML/CSS/JavaScript para uma aplicação moderna em React com TypeScript. A aplicação é um e-commerce completo para venda de bijuterias, com funcionalidades como catálogo de produtos, carrinho de compras, checkout com integração PagSeguro, e sistema de autenticação com login social. O projeto foi realizado em conjunto com a Manus IA, atendendo a uma demanda do idealizador do projeto.
 
 ## Tecnologias Utilizadas
 
